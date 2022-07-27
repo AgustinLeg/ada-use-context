@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 import App from "./App";
 import UserProvider from "./context/user/UserProvider";
 
@@ -10,7 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ChakraProvider>
         <UserProvider>
-           <App />
+          <RecoilRoot>
+            <App />
+          </RecoilRoot>
         </UserProvider>
       </ChakraProvider>
     </BrowserRouter>
