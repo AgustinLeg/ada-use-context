@@ -2,10 +2,10 @@ import { atom } from "recoil";
 
 import localStorageEffect from "./utils";
 
-const cartState = atom({
-  key: "cartState",
+const movieState = atom({
+  key: "movieState",
   default: [],
   effects: [localStorageEffect("cart")],
 });
 
-export default cartState;
+export default movieState;
