@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import MovieProvider from "./context/MovieContext";
 import UserProvider from "./context/user/UserProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -10,7 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ChakraProvider>
         <UserProvider>
-           <App />
+          <MovieProvider>
+            <App />
+          </MovieProvider>
         </UserProvider>
       </ChakraProvider>
     </BrowserRouter>
