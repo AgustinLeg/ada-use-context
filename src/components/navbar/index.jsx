@@ -8,13 +8,17 @@ import { ModalAuth } from "../auth";
 export const Navbar = () => {
   const { user, isLogged, logout } = useUserContext();
 
-  console.log(user, isLogged);
-  
   return (
     <Flex justify="space-between" bg="gray.600" p={5} color="white">
       <HStack spacing={10} as="nav">
         <Link as={RouterLink} to="/">
           Home
+        </Link>
+        <Link as={RouterLink} to="/movies">
+          Movies
+        </Link>
+        <Link as={RouterLink} to="/favorites">
+          Favs
         </Link>
         <Link as={RouterLink} to="/profile">
           Profile
